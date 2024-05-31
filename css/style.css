@@ -18,7 +18,7 @@ aside {
 
 main {
     width: 70%;
-    background-color: blueviolet;
+    background-image: url(../img/mine.jpg);
     height: 100vh;
 }
 
@@ -28,7 +28,7 @@ main>footer,
 .banner {
     background-color: #eaeaea;
     height: 80px;
-    border-left: 1px solid black;
+    border-left: 1px solid rgb(214, 214, 214);
 }
 
 section.message-area {
@@ -63,6 +63,10 @@ figure>img {
 
 .space-between {
     justify-content: space-between;
+}
+
+.jus-center {
+    justify-content: center;
 }
 
 .align-center {
@@ -139,4 +143,59 @@ article.item figure {
 article.item p {
     color: gray;
     font-size: .8rem;
+}
+
+/* Main Style */
+
+main header nav {
+    width: 98%;
+}
+
+.message-container {
+    width: 80%;
+    margin-top: 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-box {
+    background-color: white;
+    min-width: 35%;
+    max-width: 40%;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.message-box p:last-child {
+    color: gray;
+    font-size: .7rem;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.message-box.sent {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+main>footer>div {
+    width: 95%;
+    font-size: 2rem;
+    color: #b1b1b1;
+}
+
+main>footer>div>i {
+    padding: 1rem;
+}
+
+main>footer>div>input {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
 }

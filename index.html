@@ -72,14 +72,44 @@
             </section>
         </aside>
         <main>
-            <header>
-
+            <header class="flex centered">
+                <nav class="flex space-between align-center">
+                    <article class="item">
+                        <div class="flex align-center">
+                            <figure>
+                                <img src="img/avatar_1.jpg" alt="">
+                            </figure>
+                            <section>
+                                <h4>Nome</h4>
+                                <p>Ultimo accesso alle 12.00</p>
+                            </section>
+                        </div>
+                    </article>
+                    <div class="buttons-area">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </nav>
             </header>
-            <section class="message-area">
-
+            <section class="message-area flex jus-center">
+                <div class="message-container">
+                    <div class="message-box">
+                        <p>contenuto</p>
+                        <p>12.00</p>
+                    </div>
+                    <div class="message-box sent">
+                        <p>contenuto</p>
+                        <p>12.00</p>
+                    </div>
+                </div>
             </section>
-            <footer>
-
+            <footer class="flex centered">
+                <div class="flex centered">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" name="message" id="message" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
             </footer>
         </main>
     </div>
