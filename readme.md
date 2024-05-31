@@ -55,3 +55,16 @@ creo un metodo newMessage
 
 invoco il metodo New Message al keyup.enter su inputdesiderato
 
+<!-- Milestone 4
+Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina) -->
+
+creo una variabile searchedName
+
+collego tramite v-model sul input desiderato la variabile searchedName
+
+creo un metodo searchName con argomento string
+    faccio un ciclo for per leggere contacts
+    if element include string allora element.visible = true 
+    altrimenti element.visible = false
+
+invoco la funzione searchName con argomento searchedName al keyup
