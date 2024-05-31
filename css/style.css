@@ -14,6 +14,7 @@ aside {
     width: 30%;
     background-color: white;
     height: 100vh;
+    overflow-y: scroll;
 }
 
 main {
@@ -117,7 +118,6 @@ a {
 }
 
 nav.search-area {
-    margin-top: 2.5rem;
     height: 40px;
     width: 100%;
     margin-bottom: 1rem;
@@ -133,7 +133,6 @@ nav.search-area input {
 }
 
 .contacts-area {
-    height: calc(100vh - 160px);
     overflow-y: scroll;
 }
 
@@ -160,6 +159,10 @@ article.item p {
 
 main header nav {
     width: 98%;
+}
+
+.message-area {
+    overflow-y: scroll;
 }
 
 .message-container {

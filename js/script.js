@@ -167,6 +167,8 @@ createApp({
                 }
             ],
             activeIndex: 0,
+            newMessageContent: null,
+            currentDateTime: new Date().toLocaleString()
         }
     },
 
@@ -179,6 +181,38 @@ createApp({
 
         changeActiveIndex: function (i) {
             this.activeIndex = i
+        },
+
+        newMessage: function (i) {
+            this.updateDateTime();
+            let newMessageTemp = {
+                date: this.currentDateTime,
+                message: this.newMessageContent,
+                status: 'sent',
+            };
+            if (this.newMessageContent.length > 0) {
+                this.contacts[i].messages.push(newMessageTemp);
+                setTimeout(() => this.autoAnswer(i), 1000);
+            };
+            this.clearMessage();
+        },
+
+        updateDateTime: function () {
+            this.currentDateTime = new Date().toLocaleString();
+        },
+
+        clearMessage: function () {
+            this.newMessageContent = ''
+        },
+
+        autoAnswer: function (i) {
+            this.updateDateTime();
+            let newMessageTemp = {
+                date: this.currentDateTime,
+                message: 'Ok',
+                status: 'received',
+            };
+            this.contacts[i].messages.push(newMessageTemp);
         }
     },
 

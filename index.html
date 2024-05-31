@@ -103,13 +103,15 @@
             <footer class="flex centered">
                 <div class="flex centered">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" name="message" id="message" placeholder="Scrivi un messaggio">
+                    <input type="text" name="message" id="message" placeholder="Scrivi un messaggio" v-model="newMessageContent"
+                    @keyup.enter="newMessage(activeIndex)">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </footer>
         </main>
     </div>
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>
 </body>
