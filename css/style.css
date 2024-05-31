@@ -136,6 +136,10 @@ nav.search-area input {
 
 /* Item Style */
 
+article.item {
+    margin-bottom: 1rem;
+}
+
 article.item figure {
     margin-right: 1rem;
 }

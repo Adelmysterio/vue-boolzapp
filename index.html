@@ -55,13 +55,13 @@
                             placeholder="Cerca o inizia una nuova chat">
                     </nav>
                     <section class="contacts">
-                        <article class="item flex space-between">
+                        <article class="item flex space-between" v-for="(item, index) in contacts" :key="index">
                             <div class="flex">
-                                <figure>
-                                    <img src="img/avatar_1.jpg" alt="">
+                                <figure @click="toJpg">
+                                    <img :src="item.avatar" :alt="item.name">
                                 </figure>
                                 <section>
-                                    <h4>Nome</h4>
+                                    <h4>{{ item.name }}</h4>
                                     <p>Ultimo messaggio inviato</p>
                                 </section>
                             </div>

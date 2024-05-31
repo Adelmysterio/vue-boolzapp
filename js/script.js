@@ -1,7 +1,6 @@
 const { createApp } = Vue
 
 createApp({
-
     data() {
         return {
             contacts: [
@@ -167,12 +166,19 @@ createApp({
                     ],
                 }
             ]
-
         }
     },
 
     methods: {
+        toJpg: function() {
+            this.contacts.forEach(element => {
+                element.avatar = element.avatar.replace('png', 'jpg')
+            });
+        }
+    },
 
+    created() {
+        this.toJpg();
     }
 
 }).mount('#app')
