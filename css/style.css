@@ -4,34 +4,139 @@
     box-sizing: border-box;
 }
 
+/* Stile Generale */
+
 body {
     font-family: "Lato", sans-serif;
 }
 
-div#app{
-    display: flex;
-}
-
 aside {
     width: 30%;
-    background-color: aqua;
+    background-color: white;
     height: 100vh;
 }
 
 main {
-    width:70%;
+    width: 70%;
     background-color: blueviolet;
     height: 100vh;
 }
 
 aside>header,
 main>header,
-main>footer  {
+main>footer,
+.banner {
     background-color: #eaeaea;
     height: 80px;
     border-left: 1px solid black;
 }
 
 section.message-area {
-height: calc(100% - 160px);
+    height: calc(100% - 160px);
+}
+
+figure {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+figure>img {
+    width: 100%;
+}
+
+.buttons-area {
+    font-size: 1.5rem;
+    color: #b1b1b1;
+}
+
+.buttons-area i {
+    margin-right: 1rem;
+}
+
+/* Utilities */
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.centered {
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+/* Aside Style */
+
+.aside-container {
+    width: 92%;
+    display: flex;
+    align-items: center;
+}
+
+aside>header figure {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+aside .banner {
+    background-color: #8edafc;
+}
+
+aside .banner figure {
+    margin-right: 1rem;
+}
+
+.fa-bell-slash {
+    font-size: 1.5rem;
+    color: #8edafc;
+}
+
+a {
+    color: gray;
+}
+
+nav.search-area {
+    height: 40px;
+    width: 100%;
+}
+
+nav.search-area i {
+    padding: .5rem 1rem;
+}
+
+nav.search-area input {
+    width: 100%;
+    border: none;
+}
+
+.contacts {
+    width: 100%;
+}
+
+/* Item Style */
+
+article.item figure {
+    margin-right: 1rem;
+}
+
+article.item p {
+    color: gray;
+    font-size: .8rem;
 }

@@ -21,11 +21,55 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="flex">
         <aside>
-            <header>
-
+            <header class="flex space-between align-center">
+                <section class="flex align-center">
+                    <figure>
+                        <img src="img/avatar_io.jpg" alt="user avatar">
+                    </figure>
+                    <p>Sofia</p>
+                </section>
+                <div class="buttons-area">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
             </header>
+            <section class="banner flex centered">
+                <div class="aside-container">
+                    <figure class="flex centered bg-white">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </figure>
+                    <section>
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </section>
+                </div>
+            </section>
+            <section class="contacts-area flex centered">
+                <div class="aside-container column">
+                    <nav class="search-area flex align-center ">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" name="search-bar" id="search-bar"
+                            placeholder="Cerca o inizia una nuova chat">
+                    </nav>
+                    <section class="contacts">
+                        <article class="item flex space-between">
+                            <div class="flex">
+                                <figure>
+                                    <img src="img/avatar_1.jpg" alt="">
+                                </figure>
+                                <section>
+                                    <h4>Nome</h4>
+                                    <p>Ultimo messaggio inviato</p>
+                                </section>
+                            </div>
+                            <p>12.00</p>
+                        </article>
+                    </section>
+                </div>
+            </section>
         </aside>
         <main>
             <header>
@@ -35,7 +79,7 @@
 
             </section>
             <footer>
-                
+
             </footer>
         </main>
     </div>
