@@ -8,3 +8,30 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+div#app{
+    display: flex;
+}
+
+aside {
+    width: 30%;
+    background-color: aqua;
+    height: 100vh;
+}
+
+main {
+    width:70%;
+    background-color: blueviolet;
+    height: 100vh;
+}
+
+aside>header,
+main>header,
+main>footer  {
+    background-color: #eaeaea;
+    height: 80px;
+    border-left: 1px solid black;
+}
+
+section.message-area {
+height: calc(100% - 160px);
+}
