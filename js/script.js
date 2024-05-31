@@ -168,7 +168,9 @@ createApp({
             ],
             activeIndex: 0,
             newMessageContent: null,
-            currentDateTime: new Date().toLocaleString()
+            currentDateTime: new Date().toLocaleString(),
+            searchedName: null
+
         }
     },
 
@@ -213,6 +215,17 @@ createApp({
                 status: 'received',
             };
             this.contacts[i].messages.push(newMessageTemp);
+        },
+
+        searchName: function (string) {
+            this.contacts.forEach(element => {
+                if (element.name.toLowerCase().includes(string)) {
+                    element.visible = true
+                }
+                else {
+                    element.visible = false
+                }
+            });
         }
     },
 

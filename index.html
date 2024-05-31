@@ -52,10 +52,10 @@
                     <nav class="search-area flex align-center ">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" name="search-bar" id="search-bar"
-                            placeholder="Cerca o inizia una nuova chat">
+                            placeholder="Cerca o inizia una nuova chat" v-model="searchedName" @keyup="searchName(searchedName)">
                     </nav>
                     <section class="contacts">
-                        <article class="item flex space-between" v-for="(item, index) in contacts" :key="index" @click="changeActiveIndex(index)">
+                        <article class="item flex space-between" v-for="(item, index) in contacts" :key="index" @click="changeActiveIndex(index)" :class="item.visible===false ? 'display-none' : ''">
                             <div class="flex">
                                 <figure @click="toJpg">
                                     <img :src="item.avatar" :alt="item.name">
@@ -65,7 +65,7 @@
                                     <p>Ultimo messaggio inviato</p>
                                 </section>
                             </div>
-                            <p>12.00</p>
+                            <p v-if="item.visible===true">12.00</p>
                         </article>
                     </section>
                 </div>

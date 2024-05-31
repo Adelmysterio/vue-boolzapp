@@ -87,6 +87,10 @@ figure>img {
     background-color: white;
 }
 
+.display-none {
+    display: none;
+}
+
 /* Aside Style */
 
 .aside-container {

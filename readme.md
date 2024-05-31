@@ -67,4 +67,4 @@ creo un metodo searchName con argomento string
     if element include string allora element.visible = true 
     altrimenti element.visible = false
 
-invoco la funzione searchName con argomento searchedName al keyup
+invoco la funzione searchName con argomento searchedName al keyup sul input desiderato
