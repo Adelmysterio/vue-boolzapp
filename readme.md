@@ -24,3 +24,34 @@ collego tramite v-bind la src del immagine e il nome del contatto al item all in
 creo un ciclo v-for per i messaggi di contacts all indice activeindex
 
 collego tramite v:bind il contenuto di dei messaggi e applico la classe sent se status == 'sent'
+
+<!-- Milestone 3
+Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo. -->
+
+creo una variabile newMessageContent = null
+
+collego con v-model l input desiderato con newMessageContent
+
+creo una varibile che mi stampi la data currentDateTime = new Date().toLocaleString()
+
+creo un metodo updateDateTime per aggiornare la data ponendo currentDateTime = new Date().toLocaleString()
+
+creo un metodo autoAnswer
+    invoco updateDateTime
+    dichiaro un oggetto newMessageTemp con chiavi
+        date: this.currentDateTime,
+        message: 'ok',
+        status: 'received',
+pusho newMessageTemp in this.contacts[i].messages
+
+creo un metodo newMessage 
+    invoco updateDateTime
+    dichiaro un oggetto newMessageTemp con chiavi
+        date: this.currentDateTime,
+        message: this.newMessageContent,
+        status: 'sent',
+    se lunghezza di this.newMessageContent > 0 pusho newMessageTemp in this.contacts[i].messages e invoco autoAnswer in ritardo di 1000ms
+
+invoco il metodo New Message al keyup.enter su inputdesiderato
+
