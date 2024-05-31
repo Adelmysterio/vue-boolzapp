@@ -165,15 +165,20 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            activeIndex: 0,
         }
     },
 
     methods: {
-        toJpg: function() {
+        toJpg: function () {
             this.contacts.forEach(element => {
                 element.avatar = element.avatar.replace('png', 'jpg')
             });
+        },
+
+        changeActiveIndex: function (i) {
+            this.activeIndex = i
         }
     },
 

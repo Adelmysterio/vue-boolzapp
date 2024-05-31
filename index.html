@@ -55,7 +55,7 @@
                             placeholder="Cerca o inizia una nuova chat">
                     </nav>
                     <section class="contacts">
-                        <article class="item flex space-between" v-for="(item, index) in contacts" :key="index">
+                        <article class="item flex space-between" v-for="(item, index) in contacts" :key="index" @click="changeActiveIndex(index)">
                             <div class="flex">
                                 <figure @click="toJpg">
                                     <img :src="item.avatar" :alt="item.name">
@@ -77,10 +77,10 @@
                     <article class="item">
                         <div class="flex align-center">
                             <figure>
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="this.contacts[activeIndex].avatar" alt="this.contacts[activeIndex].name">
                             </figure>
                             <section>
-                                <h4>Nome</h4>
+                                <h4>{{this.contacts[activeIndex].name}}</h4>
                                 <p>Ultimo accesso alle 12.00</p>
                             </section>
                         </div>
@@ -93,14 +93,10 @@
                 </nav>
             </header>
             <section class="message-area flex jus-center">
-                <div class="message-container">
-                    <div class="message-box">
-                        <p>contenuto</p>
-                        <p>12.00</p>
-                    </div>
-                    <div class="message-box sent">
-                        <p>contenuto</p>
-                        <p>12.00</p>
+                <div class="message-container" >
+                    <div class="message-box" v-for="(item, index) in contacts[activeIndex].messages" :key="index" :class="item.status=='sent' ? 'sent': ''">
+                        <p>{{item.message}}</p>
+                        <p>{{item.date}}</p>
                     </div>
                 </div>
             </section>

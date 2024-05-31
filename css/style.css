@@ -117,8 +117,10 @@ a {
 }
 
 nav.search-area {
+    margin-top: 2.5rem;
     height: 40px;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 nav.search-area i {
@@ -128,6 +130,11 @@ nav.search-area i {
 nav.search-area input {
     width: 100%;
     border: none;
+}
+
+.contacts-area {
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
 }
 
 .contacts {
