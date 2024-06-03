@@ -68,3 +68,27 @@ creo un metodo searchName con argomento string
     altrimenti element.visible = false
 
 invoco la funzione searchName con argomento searchedName al keyup sul input desiderato
+
+<!-- Milestone 5 - opzionale
+Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
+
+Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti  -->
+
+<!-- cancella Messaggio -->
+creo una varibile isDropdownShown = false
+
+creo un metodo pushDropDown che mi inserisca isDropdownShown come chiave del oggetto messaggio per farlo creo un forEach su contact e al suo interno un foreach di messages ed aggiungo la chiave
+
+invoco il metodo pushDropDown sul lifecycle hook created 
+
+creo un metodo toggleDropdown che cambi il valore di isDropDownShown all interno di messages
+
+creo un metodo deleteMessage che elimini il messaggio usando splice
+
+creo il menu a tendina con html css e lo metto in display none
+
+creo un bottone che quando cliccato mostri il menu a tendina all interno del v-for dei messaggi ed invoco toggleDropdown
+
+creo un v-if usando isDropDownShown all interno degli item
+
+invoco la funzione deleteMessaggio all interno del dropdown menu
