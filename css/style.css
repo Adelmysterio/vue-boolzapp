@@ -8,19 +8,32 @@
 
 body {
     font-family: "Lato", sans-serif;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        #009688 0px,
+        #009688 160px,
+        #dbdbd3 160px,
+        #dbdbd3 100%
+    );
+}
+
+div#app {
+    width: 90%;
+    height: 90%;
+    margin: auto;
 }
 
 aside {
     width: 30%;
     background-color: white;
-    height: 100vh;
     overflow-y: scroll;
 }
 
 main {
     width: 70%;
     background-image: url(../img/mine.jpg);
-    height: 100vh;
 }
 
 aside>header,
@@ -29,7 +42,6 @@ main>footer,
 .banner {
     background-color: #eaeaea;
     height: 80px;
-    border-left: 1px solid rgb(214, 214, 214);
 }
 
 section.message-area {
@@ -91,6 +103,10 @@ figure>img {
     display: none;
 }
 
+.display-inline {
+    display: initial;
+}
+
 /* Aside Style */
 
 .aside-container {
@@ -136,7 +152,7 @@ nav.search-area input {
     border: none;
 }
 
-.contacts-area {
+.contacts {
     overflow-y: scroll;
 }
 
@@ -187,7 +203,17 @@ main header nav {
     align-items: flex-start;
 }
 
-.message-box p:last-child {
+.fa-chevron-down {
+    color: #b1b1b1;
+    display: none;
+    position: relative;
+}
+
+.message-box:hover .fa-chevron-down {
+    display: inline;
+}
+
+.message-box>p:nth-child(2) {
     color: gray;
     font-size: .7rem;
     text-align: right;
@@ -216,4 +242,19 @@ main>footer>div>input {
     padding: 1rem;
     border-radius: 10px;
     font-size: 1rem;
+}
+
+.dropdown {
+    position: absolute;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: black;
+    background-color: white;
+    width: 12rem;
+    padding: .5rem;
+    border: 1px solid black;
+}
+
+.dropdown p:first-child{
+    margin-bottom: 1rem;
 }

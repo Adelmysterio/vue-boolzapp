@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
-<body>
+<body class="flex">
     <div id="app" class="flex">
         <aside>
             <header class="flex space-between align-center">
@@ -51,11 +51,12 @@
                 <div class="aside-container column">
                     <nav class="search-area flex align-center ">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" name="search-bar" id="search-bar"
-                            placeholder="Cerca o inizia una nuova chat" v-model="searchedName" @keyup="searchName(searchedName)">
+                        <input type="text" name="search-bar" id="search-bar" placeholder="Cerca o inizia una nuova chat"
+                            v-model="searchedName" @keyup="searchName(searchedName)">
                     </nav>
                     <section class="contacts">
-                        <article class="item flex space-between" v-for="(item, index) in contacts" :key="index" @click="changeActiveIndex(index)" :class="item.visible===false ? 'display-none' : ''">
+                        <article class="item flex space-between" v-for="(item, index) in contacts" :key="index"
+                            @click="changeActiveIndex(index)" :class="item.visible===false ? 'display-none' : ''">
                             <div class="flex">
                                 <figure @click="toJpg">
                                     <img :src="item.avatar" :alt="item.name">
@@ -93,9 +94,18 @@
                 </nav>
             </header>
             <section class="message-area flex jus-center">
-                <div class="message-container" >
-                    <div class="message-box" v-for="(item, index) in contacts[activeIndex].messages" :key="index" :class="item.status=='sent' ? 'sent': ''">
-                        <p>{{item.message}}</p>
+                <div class="message-container">
+                    <div class="message-box" v-for="(item, index) in contacts[activeIndex].messages" :key="index"
+                        :class="item.status=='sent' ? 'sent': ''">
+                        <section class="flex space-between">
+                            <p>{{item.message}}</p>
+                            <i class="fa-solid fa-chevron-down" @click="toggleDropdown">
+                                <div class="dropdown" v-if="isDropdownShown=== true">
+                                    <p>Cancella messaggio</p>
+                                    <p>Informazioni messaggio</p>
+                                </div>
+                            </i>
+                        </section>
                         <p>{{item.date}}</p>
                     </div>
                 </div>
@@ -103,8 +113,8 @@
             <footer class="flex centered">
                 <div class="flex centered">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" name="message" id="message" placeholder="Scrivi un messaggio" v-model="newMessageContent"
-                    @keyup.enter="newMessage(activeIndex)">
+                    <input type="text" name="message" id="message" placeholder="Scrivi un messaggio"
+                        v-model="newMessageContent" @keyup.enter="newMessage(activeIndex)">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </footer>
