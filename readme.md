@@ -72,7 +72,7 @@ invoco la funzione searchName con argomento searchedName al keyup sul input desi
 <!-- Milestone 5 - opzionale
 Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 
-Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti  -->
+
 
 <!-- cancella Messaggio -->
 creo una varibile isDropdownShown = false
@@ -93,3 +93,6 @@ creo un v-if usando isDropDownShown all interno degli item
 
 invoco la funzione deleteMessaggio all interno del dropdown menu
 
+<!-- Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti  -->
+
+modificare il percorso all interno dei tag corrispondenti
