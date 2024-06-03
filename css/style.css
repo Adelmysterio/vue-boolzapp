@@ -205,12 +205,7 @@ main header nav {
 
 .fa-chevron-down {
     color: #b1b1b1;
-    display: none;
     position: relative;
-}
-
-.message-box:hover .fa-chevron-down {
-    display: inline;
 }
 
 .message-box>p:nth-child(2) {

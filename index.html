@@ -95,13 +95,12 @@
             </header>
             <section class="message-area flex jus-center">
                 <div class="message-container">
-                    <div class="message-box" v-for="(item, index) in contacts[activeIndex].messages" :key="index"
-                        :class="item.status=='sent' ? 'sent': ''">
+                    <div class="message-box" v-for="(item, index) in contacts[activeIndex].messages" :key="index" :class="item.status=='sent' ? 'sent': ''">
                         <section class="flex space-between">
                             <p>{{item.message}}</p>
-                            <i class="fa-solid fa-chevron-down" @click="toggleDropdown">
-                                <div class="dropdown" v-if="isDropdownShown=== true">
-                                    <p>Cancella messaggio</p>
+                            <i class="fa-solid fa-chevron-down" @click="toggleDropdown(activeIndex, index)">
+                                <div class="dropdown" v-if="item.showDropdown">
+                                    <p @click="deleteMessage(activeIndex, index)">Cancella messaggio</p>
                                     <p>Informazioni messaggio</p>
                                 </div>
                             </i>

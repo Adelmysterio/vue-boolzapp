@@ -169,8 +169,8 @@ createApp({
             activeIndex: 0,
             newMessageContent: null,
             currentDateTime: new Date().toLocaleString(),
-            searchedName: null
-
+            searchedName: null,
+            isDropdownShown: false
         }
     },
 
@@ -226,11 +226,29 @@ createApp({
                     element.visible = false
                 }
             });
-        }
+        },
+
+        pushDropDown: function () {
+
+            this.contacts.forEach(contact => {
+                contact.messages.forEach(element => {
+                    element.isDropdownShown = this.isDropdownShown
+                });
+            });
+        },
+
+        toggleDropdown: function (contactIndex, messageIndex) {
+            this.contacts[contactIndex].messages[messageIndex].showDropdown = !this.contacts[contactIndex].messages[messageIndex].showDropdown;
+        },
+
+        deleteMessage: function (contactIndex, messageIndex) {
+            this.contacts[contactIndex].messages.splice(messageIndex, 1);
+        },
     },
 
     created() {
         this.toJpg();
+        this.pushDropDown()
     }
 
 }).mount('#app')
