@@ -63,10 +63,10 @@
                                 </figure>
                                 <section>
                                     <h4>{{ item.name }}</h4>
-                                    <p>Ultimo messaggio inviato</p>
+                                    <p>{{this.contacts[index].messages[this.contacts[index].messages.length-1].message}}</p>
                                 </section>
                             </div>
-                            <p v-if="item.visible===true">12.00</p>
+                            <p v-if="item.visible===true">{{this.contacts[index].messages[this.contacts[index].messages.length-1].date}}</p>
                         </article>
                     </section>
                 </div>

@@ -92,3 +92,4 @@ creo un bottone che quando cliccato mostri il menu a tendina all interno del v-f
 creo un v-if usando isDropDownShown all interno degli item
 
 invoco la funzione deleteMessaggio all interno del dropdown menu
+
