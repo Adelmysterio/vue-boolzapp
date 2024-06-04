@@ -219,7 +219,7 @@ createApp({
 
         searchName: function (string) {
             this.contacts.forEach(element => {
-                if (element.name.toLowerCase().includes(string)) {
+                if (element.name.toLowerCase().includes(string.toLowerCase())) {
                     element.visible = true
                 }
                 else {

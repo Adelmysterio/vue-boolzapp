@@ -58,7 +58,7 @@
                         <article class="item flex space-between" v-for="(item, index) in contacts" :key="index"
                             @click="changeActiveIndex(index)" :class="item.visible===false ? 'display-none' : ''">
                             <div class="flex">
-                                <figure @click="toJpg">
+                                <figure>
                                     <img :src="item.avatar" :alt="item.name">
                                 </figure>
                                 <section>

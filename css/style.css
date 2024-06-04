@@ -99,6 +99,10 @@ figure>img {
     background-color: white;
 }
 
+.bg-green {
+    background-color: #d5f9ba;
+}
+
 .display-none {
     display: none;
 }
@@ -174,8 +178,6 @@ article.item p {
     color: gray;
     font-size: .8rem;
 }
-
-
 
 /* Main Style */
 
@@ -254,4 +256,10 @@ main>footer>div>input {
 
 .dropdown p:first-child{
     margin-bottom: 1rem;
+}
+
+i:hover,
+article,
+.message-box {
+cursor: pointer;
 }
